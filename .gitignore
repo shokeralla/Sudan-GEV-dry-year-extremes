@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+*.pkl
+out_quick/
+fig_quick/

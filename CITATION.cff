@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use these data or code, please cite them as below."
+title: "Censored versus two-part GEV models for annual rainfall maxima in hyper-arid regions: Sudan, 1981-2024 (data and code)"
+authors:
+  - family-names: Shokeralla
+    given-names: Alshaikh A.
+    orcid: "https://orcid.org/0000-0002-1518-475X"
+repository-code: "https://github.com/shokeralla/sudan-gev-dry-year-extremes"
+license: MIT
+date-released: 2026-10-12
