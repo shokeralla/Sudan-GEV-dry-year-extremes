@@ -2,7 +2,7 @@
 
 Code and data for the manuscript
 
-> Shokeralla AA. *Joint modelling of the timing and magnitude of annual maximum daily rainfall with a non-stationary cylindrical extreme value model: an application to Sudan.* Submitted to *Environmental and Ecological Statistics*.
+> Shokeralla AA. *A cylindrical extreme value model for the timing and magnitude of annual maximum rainfall in Sudan.* Submitted to *Environmental and Ecological Statistics*.
 
 The model couples a von Mises distribution for the date of the annual maximum with a GEV distribution for its size, whose location depends on time, on the signed lateness of the event and on its distance from the seasonal peak (models M0–M3). It is applied to CHIRPS v2.0 daily rainfall, 1981–2024, at ten sites in Sudan, with NASA POWER used as a screened comparison.
 
@@ -15,7 +15,7 @@ The model couples a von Mises distribution for the date of the annual maximum wi
 | `data/indices/` | Monthly Niño 3.4 and DMI series from NOAA PSL |
 | `scripts/` | All analysis code (see below) |
 | `out/` | Annual maxima and dates (`pairs_chirps.csv`, `pairs_power.csv`), homogeneity tests, model results |
-| `fig/` | Figures 1, 2, B1 and D1 of the manuscript (300 dpi) |
+| `fig/` | Figures 1, 2, 3, B1 and D1 of the manuscript (300 dpi) |
 
 ## Reproducing the results
 
@@ -28,7 +28,8 @@ python scripts/chirps_pairs.py    # CHIRPS annual maxima + homogeneity tests -> 
 python scripts/models.py out/pairs_chirps.csv chirps 200   # M0-M3 fits, return levels, pooling (about 10 min)
 python scripts/extra.py           # descriptive and circular summaries, product comparison
 python scripts/watson.py          # bootstrap Watson U2 tests for the von Mises margin
-python scripts/figs.py            # figures -> fig/
+python scripts/figs.py            # Figs 2, 3, B1, D1 -> fig/
+python scripts/map.py             # Fig 1 site map (needs geopandas<1.0, which bundles Natural Earth boundaries)
 ```
 
 `models.py` uses fixed random seeds, so bootstrap results are reproducible.

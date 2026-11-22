@@ -12,7 +12,7 @@ for ax,s in zip(axs.flat,order):
 fig.supxlabel('Day of year of annual maximum (CHIRPS, 1981–2024)',fontsize=9)
 fig.supylabel('Annual maximum daily rainfall (mm)',fontsize=9)
 cb=fig.colorbar(sc,ax=axs,shrink=.8,pad=.01); cb.set_label('Year')
-fig.savefig('fig/Fig1_cylindrical_scatter.png',dpi=300,bbox_inches='tight')
+fig.savefig('fig/Fig2_cylindrical_scatter.png',dpi=300,bbox_inches='tight')
 # Fig 2 forest
 T=T.set_index('site').loc[order[::-1]]
 rel=100*T.mu1/T.mu0; rse=100*T.se_mu1/T.mu0
@@ -24,7 +24,7 @@ ax[2].errorbar(T.b2,y,xerr=1.96*T.se_b2,fmt='o',color='k',ms=4,capsize=2); ax[2]
 ax[0].set_yticks(y); ax[0].set_yticklabels(T.index)
 for a in ax: a.grid(alpha=.3)
 ax[0].set_title('(a) Magnitude trend, M1',fontsize=9); ax[1].set_title('(b) Timing trend, M3',fontsize=9); ax[2].set_title('(c) Timing–magnitude dependence, M2',fontsize=9)
-fig.tight_layout(); fig.savefig('fig/Fig2_site_effects.png',dpi=300,bbox_inches='tight')
+fig.tight_layout(); fig.savefig('fig/Fig3_site_effects.png',dpi=300,bbox_inches='tight')
 # Fig 3 product comparison
 Wc=C.pivot(index='year',columns='site',values='max_mm'); Wp=P.pivot(index='year',columns='site',values='max_mm')
 fig,ax=plt.subplots(figsize=(7.5,3.4))
