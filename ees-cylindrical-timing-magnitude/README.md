@@ -14,8 +14,8 @@ The model couples a von Mises distribution for the date of the annual maximum wi
 | `data/power/` | NASA POWER daily `PRECTOTCORR` files for the same ten points |
 | `data/indices/` | Monthly Niño 3.4 and DMI series from NOAA PSL |
 | `scripts/` | All analysis code (see below) |
-| `out/` | Annual maxima and dates (`pairs_chirps.csv`, `pairs_power.csv`), homogeneity tests, model results |
-| `fig/` | Figures 1, 2, 3, B1 and D1 of the manuscript (300 dpi) |
+| `out/` | Online Resource 1 (`ESM_1.xlsx`), annual maxima and dates (`pairs_chirps.csv`, `pairs_power.csv`), homogeneity tests, model results |
+| `fig/` | Figures 1–5 of the manuscript (600 dpi PNG; TIFF copies are written by the scripts) |
 
 ## Reproducing the results
 
@@ -28,7 +28,7 @@ python scripts/chirps_pairs.py    # CHIRPS annual maxima + homogeneity tests -> 
 python scripts/models.py out/pairs_chirps.csv chirps 200   # M0-M3 fits, return levels, pooling (about 10 min)
 python scripts/extra.py           # descriptive and circular summaries, product comparison
 python scripts/watson.py          # bootstrap Watson U2 tests for the von Mises margin
-python scripts/figs.py            # Figs 2, 3, B1, D1 -> fig/
+python scripts/figs.py            # Figs 2-5 -> fig/ (PNG and TIFF)
 python scripts/map.py             # Fig 1 site map (needs geopandas<1.0, which bundles Natural Earth boundaries)
 ```
 
